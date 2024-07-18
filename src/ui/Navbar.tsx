@@ -69,7 +69,7 @@ function Navbar() {
 
       <div
         className={`fixed top-0 right-0 h-full bg-[#1f2124] p-4 transform ${
-          isSidebarOpen ? "slate-8-0" : "slate-8-full"
+          isSidebarOpen ? "translate-x-0" : "translate-x-full"
         } transition-transform duration-300 ease-in-out z-50 md:hidden`}
       >
         <button className="text-wh mb-4" onClick={toggleSidebar}>

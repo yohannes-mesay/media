@@ -11,6 +11,16 @@ body {
 .no-scrollbar::-webkit-scrollbar {
   display: none;
 }
+a {
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+button:hover,
+a:hover {
+  transform: scale(1.05);
+  opacity: 0.9;
+  color: #ffd37d;
+}
 
 #root {
   padding: 0;

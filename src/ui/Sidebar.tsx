@@ -7,8 +7,16 @@ import {
   TvMinimalPlay,
   Users,
 } from "lucide-react";
+import { useState } from "react";
 
 function Sidebar() {
+  const [hovered, setHovered] = useState("");
+  function handleHover(icon) {
+    setHovered(icon);
+  }
+  function handleOut() {
+    setHovered(null);
+  }
   return (
     <div className="bg-black text-wh py-12 px-10 max-w-72 flex flex-col items-center gap-1">
       <Avatar className="w-24 h-24">
@@ -36,26 +44,61 @@ function Sidebar() {
         </div>
         <div className="w-100 h-6 px-0 -mx-10 rounded-xl  bg-black"></div>{" "}
         <div className="flex flex-col gap-3 px-2">
-          <div className="flex gap-3 ">
-            <Home />
-            <p>Feed</p>
-          </div>
-          <div className="flex gap-3">
-            <Users color="white" strokeWidth={1.5} />
+          <button
+            onMouseOver={() => handleHover("ic1")}
+            onMouseOut={handleOut}
+            className="flex hover:duration-500 gap-3 hover:bg-brand hover:py-0.5 hover:pt-1 pt-1 rounded-sm hover:px-2  hover:text-black"
+          >
+            <Home
+              color={hovered === "ic1" ? "black" : "white"}
+              strokeWidth={1.5}
+            />
+            <p className="">Feed</p>
+          </button>
+          <button
+            onMouseOver={() => handleHover("ic2")}
+            onMouseOut={handleOut}
+            className="flex hover:duration-500 gap-3 hover:bg-brand hover:py-0.5 hover:pt-1 pt-1 rounded-sm hover:px-2  hover:text-black"
+          >
+            <Users
+              color={hovered === "ic2" ? "black" : "white"}
+              strokeWidth={1.5}
+            />
             <p>Friends</p>
-          </div>{" "}
-          <div className="flex gap-3">
-            <SwitchCamera color="white" strokeWidth={1.5} />
+          </button>{" "}
+          <button
+            onMouseOver={() => handleHover("ic3")}
+            onMouseOut={handleOut}
+            className="flex hover:duration-500 gap-3 hover:bg-brand hover:py-0.5 hover:pt-1 pt-1 rounded-sm hover:px-2  hover:text-black"
+          >
+            <SwitchCamera
+              color={hovered === "ic3" ? "black" : "white"}
+              strokeWidth={1.5}
+            />
             <p>Photos</p>
-          </div>{" "}
-          <div className="flex gap-3">
-            <TvMinimalPlay color="white" strokeWidth={1.5} />
+          </button>{" "}
+          <button
+            onMouseOver={() => handleHover("ic4")}
+            onMouseOut={handleOut}
+            className="flex hover:duration-500 gap-3 hover:bg-brand hover:py-0.5 hover:pt-1 pt-1 rounded-sm hover:px-2  hover:text-black"
+          >
+            <TvMinimalPlay
+              color={hovered === "ic4" ? "black" : "white"}
+              strokeWidth={1.5}
+            />
             <p>Videos</p>
-          </div>{" "}
-          <div className="flex gap-3">
-            <Map color="white" strokeWidth={1.5} />
+          </button>{" "}
+          <button
+            onMouseOver={() => handleHover("ic5")}
+            onMouseOut={handleOut}
+            className="flex hover:duration-500 gap-3 hover:bg-brand hover:py-0.5 hover:pt-1 pt-1 rounded-sm hover:px-2  hover:text-black"
+          >
+            <Map
+              color={hovered === "ic5" ? "black" : "white"}
+              strokeWidth={1.5}
+            />
             <p>Map</p>
-          </div>
+          </button>
         </div>
         <div className="h-[0.5px] px-0  rounded-xl  bg-stone-300"></div>{" "}
         <p className="text-start text-sm">Pages you may like</p>

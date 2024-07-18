@@ -11,7 +11,7 @@ function Card() {
           Location , Lumajajng, East Java
         </p>
         <div className="h-[0.5px] px-0 mt-5 text-wh  rounded-xl  bg-stone-300"></div>{" "}
-        <button className="self-end mt-2 border text-sm py-0.5 w-1/4 rounded-2xl border-amber-600">
+        <button className="self-end mt-2 border text-sm py-0.5 w-1/4 rounded-2xl hover:border-amber-7 00 border-amber-600">
           Join
         </button>
       </div>
