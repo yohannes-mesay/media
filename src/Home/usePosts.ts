@@ -1,6 +1,6 @@
 import { useQuery } from "@tanstack/react-query";
 import getPosts from "@/services/apiPosts";
-
+import { PostgrestError } from "@supabase/postgrest-js"; // Assuming you're using Supabase
 interface PostType {
   id: number;
   created_at: Date;
@@ -10,15 +10,13 @@ interface PostType {
 }
 
 export function usePosts() {
-  const {
-    data: posts,
-    isLoading,
-    error,
-  } = useQuery<{ data: PostType[] | null; error: PostgrestError | null }>({
+  const { data, isLoading, error } = useQuery<{
+    data: PostType[] | null;
+    error: PostgrestError | null;
+  }>({
     queryKey: ["posts"],
     queryFn: getPosts,
   });
 
-  console.log(posts);
-  return { posts, isLoading, error };
+  return { data, isLoading, error };
 }

@@ -30,16 +30,16 @@ function Sidebar() {
       <div className="flex py-6 pt-3 flex-col gap-3 rounded-lg max-w-60 bg-cover px-4  bg-bg">
         <div className="flex text-[13px] justify-around gap-2 text-md rounded-md items-center">
           <div>
-            <p className="text-slate-50">3.7k</p>
-            <p className="text-wh">Followers</p>
+            <button className="text-slate-50">3.7k</button>
+            <button className="text-wh">Followers</button>
           </div>
           <div>
-            <p className="text-slate-50">3.7k</p>
-            <p className="text-wh">Followers</p>
+            <button className="text-slate-50">3.7k</button>
+            <button className="text-wh">Followers</button>
           </div>
           <div>
-            <p className="text-slate-50">3.7k</p>
-            <p className="text-wh">Followers</p>
+            <button className="text-slate-50">3.7k</button>
+            <button className="text-wh">Followers</button>
           </div>
         </div>
         <div className="w-100 h-6 px-0 -mx-10 rounded-xl  bg-black"></div>{" "}
@@ -47,7 +47,7 @@ function Sidebar() {
           <button
             onMouseOver={() => handleHover("ic1")}
             onMouseOut={handleOut}
-            className="flex hover:duration-500 gap-3 hover:bg-brand hover:py-0.5 hover:pt-1 pt-1 rounded-sm hover:px-2  hover:text-black"
+            className="flex hover:duration-200 gap-3 hover:bg-brand hover:py-0.5 hover:pt-1 pt-1 rounded-sm hover:px-2  hover:text-black"
           >
             <Home
               color={hovered === "ic1" ? "black" : "white"}
@@ -58,7 +58,7 @@ function Sidebar() {
           <button
             onMouseOver={() => handleHover("ic2")}
             onMouseOut={handleOut}
-            className="flex hover:duration-500 gap-3 hover:bg-brand hover:py-0.5 hover:pt-1 pt-1 rounded-sm hover:px-2  hover:text-black"
+            className="flex hover:duration-200 gap-3 hover:bg-brand hover:py-0.5 hover:pt-1 pt-1 rounded-sm hover:px-2  hover:text-black"
           >
             <Users
               color={hovered === "ic2" ? "black" : "white"}
@@ -69,7 +69,7 @@ function Sidebar() {
           <button
             onMouseOver={() => handleHover("ic3")}
             onMouseOut={handleOut}
-            className="flex hover:duration-500 gap-3 hover:bg-brand hover:py-0.5 hover:pt-1 pt-1 rounded-sm hover:px-2  hover:text-black"
+            className="flex hover:duration-200 gap-3 hover:bg-brand hover:py-0.5 hover:pt-1 pt-1 rounded-sm hover:px-2  hover:text-black"
           >
             <SwitchCamera
               color={hovered === "ic3" ? "black" : "white"}
@@ -80,7 +80,7 @@ function Sidebar() {
           <button
             onMouseOver={() => handleHover("ic4")}
             onMouseOut={handleOut}
-            className="flex hover:duration-500 gap-3 hover:bg-brand hover:py-0.5 hover:pt-1 pt-1 rounded-sm hover:px-2  hover:text-black"
+            className="flex hover:duration-200 gap-3 hover:bg-brand hover:py-0.5 hover:pt-1 pt-1 rounded-sm hover:px-2  hover:text-black"
           >
             <TvMinimalPlay
               color={hovered === "ic4" ? "black" : "white"}
@@ -91,7 +91,7 @@ function Sidebar() {
           <button
             onMouseOver={() => handleHover("ic5")}
             onMouseOut={handleOut}
-            className="flex hover:duration-500 gap-3 hover:bg-brand hover:py-0.5 hover:pt-1 pt-1 rounded-sm hover:px-2  hover:text-black"
+            className="flex hover:duration-200 gap-3 hover:bg-brand hover:py-0.5 hover:pt-1 pt-1 rounded-sm hover:px-2  hover:text-black"
           >
             <Map
               color={hovered === "ic5" ? "black" : "white"}
